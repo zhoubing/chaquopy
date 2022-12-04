@@ -15,9 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        new Thread() {
+            @Override
+            public void run() {
+
+            }
+        }.start();
         Python python = Python.getInstance();
         PyObject pythonModule = python.getModule("main");
-        PyObject pyObject = pythonModule.callAttr("helloworld");
-        Log.d("chaquopy", pyObject.toString());
+        PyObject pyObject = pythonModule.callAttr("startServer");
+//        Log.d("chaquopy", pyObject.toString());
     }
 }

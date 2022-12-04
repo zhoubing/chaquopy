@@ -10,8 +10,8 @@ public class ChaquopyApplication extends PyApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-//        if (!Python.isStarted()) {
-//            Python.start(new AndroidPlatform(this));
-//        }
+        if (!Python.isStarted()) {
+            Python.start(new AndroidPlatform(this));
+        }
     }
 }

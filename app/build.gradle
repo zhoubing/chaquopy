@@ -25,7 +25,12 @@ android {
             }
         }
         python {
-            buildPython "/Users/zhoubing/opt/miniconda3/envs/py3.8/bin/python"
+            buildPython "C:\\dev\\miniconda3\\envs\\py3.9\\python"
+
+            pip {
+                options "--index-url", "https://pypi.tuna.tsinghua.edu.cn/simple"
+                install "flask"
+            }
         }
     }
 
