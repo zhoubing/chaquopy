@@ -30,6 +30,14 @@ android {
             pip {
                 options "--index-url", "https://pypi.tuna.tsinghua.edu.cn/simple"
                 install "flask"
+                install "gevent-websocket"
+                install "gevent"
+            }
+
+            // to disable compilation of your local source code:
+            //https://chaquo.com/chaquopy/doc/current/android.html#android-bytecode
+            pyc {
+                src false
             }
         }
     }

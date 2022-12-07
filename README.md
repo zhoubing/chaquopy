@@ -16,3 +16,6 @@ https://chaquo.com/chaquopy/doc/current/android.html#android-requirements
 ###faq
 https://chaquo.com/chaquopy/doc/current/faq.html
 
+### build wheel
+https://github.com/chaquo/build-wheel
+
