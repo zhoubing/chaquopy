@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Python python = Python.getInstance();
-        PyObject pythonModule = python.getModule("ws_client");
+        PyObject pythonModule = python.getModule("ftp_server");
         PyObject pyObject = pythonModule.callAttr("startServer");
 //        Log.d("chaquopy", pyObject.toString());
     }
