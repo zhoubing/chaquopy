@@ -25,19 +25,13 @@ android {
             }
         }
         python {
-            buildPython "C:\\dev\\miniconda3\\envs\\py3.9\\python"
-
+//            buildPython "C:\\dev\\miniconda3\\envs\\py3.9\\python"
+            buildPython "/Users/zhoubing/opt/miniconda3/envs/py3.10/bin/python"
             pip {
                 options "--index-url", "https://pypi.tuna.tsinghua.edu.cn/simple"
                 install "flask"
-                install "gevent-websocket"
-                install "gevent"
-            }
-
-            // to disable compilation of your local source code:
-            //https://chaquo.com/chaquopy/doc/current/android.html#android-bytecode
-            pyc {
-                src false
+                install "websockets"
+                install "websocket-client"
             }
         }
     }
