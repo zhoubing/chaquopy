@@ -1,8 +1,9 @@
 from flask import Flask
 
-def helloworld():
-    return "Hello World from Python"
+app = Flask(__name__)
 
+def main():
+    app.run(host='0.0.0.0', port=9000)
 
 def startServer():
     app = Flask(__name__)

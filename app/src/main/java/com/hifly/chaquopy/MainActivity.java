@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }.start();
         Python python = Python.getInstance();
-        PyObject pythonModule = python.getModule("main");
+        PyObject pythonModule = python.getModule("ws_client");
         PyObject pyObject = pythonModule.callAttr("startServer");
 //        Log.d("chaquopy", pyObject.toString());
     }
