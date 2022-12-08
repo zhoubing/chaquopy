@@ -16,3 +16,12 @@ https://chaquo.com/chaquopy/doc/current/android.html#android-requirements
 ###faq
 https://chaquo.com/chaquopy/doc/current/faq.html
 
+### chaquopy 13.0 doc
+https://chaquo.com/chaquopy/doc/current/
+
+### official 3rd lib
+https://chaquo.com/pypi-7.0/
+
+### libs
+https://github.com/websocket-client/websocket-client
+https://websocket-client.readthedocs.io/en/latest/
