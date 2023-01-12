@@ -40,3 +40,21 @@ def startServer():
                            on_close=on_close)
     # self.ws.on_open = self.on_open  # 也可以先创建对象再这样指定回调函数。run_forever 之前指定回调函数即可。
     ws.run_forever()
+
+def hello_world(str):
+    print(str)
+    if java_callback:
+        print(java_callback("async msg from python!!!"))
+    return "sync msg from Python!!!!"
+
+
+def pass_object():
+    print("pass_object!!!!")
+    if pass_object_callback:
+        print(pass_object_callback({
+            "name": "Python name"
+        }))
+    print("pass_object!!!!")
+    return {
+        "name": "Python name"
+    }
