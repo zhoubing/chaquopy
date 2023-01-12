@@ -28,12 +28,12 @@ def on_pong(ws, message):
 
 def on_open(ws):
     print("####### on_open #######")
-    ws.send("hello from android client!!!")
+    ws.send("hello")
 
 def startServer():
     websocket.enableTrace(True)  # 开启运行状态追踪。debug 的时候最好打开他，便于追踪定位问题。
 
-    ws = WebSocketApp("ws://10.0.0.4:8765/",
+    ws = WebSocketApp("ws://10.0.0.2:8888/",
                            on_open=on_open,
                            on_message=on_message,
                            on_error=on_error,
