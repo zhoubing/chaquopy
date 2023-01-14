@@ -52,7 +52,7 @@ def pass_object():
     print("pass_object!!!!")
     if pass_object_callback:
         print(pass_object_callback({
-            "name": "Python name"
+            "name": "Python name111"
         }))
     print("pass_object!!!!")
     return {
