@@ -28,3 +28,9 @@ https://chaquo.com/pypi-7.0/
 ### libs
 https://github.com/websocket-client/websocket-client
 https://websocket-client.readthedocs.io/en/latest/
+
+
+### chaquopy jni部分
+https://github.com/chaquo/chaquopy/blob/master/product/runtime/src/main/python/chaquopy_java.pyx
+https://github.com/chaquo/chaquopy/blob/ebf3bec6624fa3c48928f2884b11722c34482de9/product/runtime/src/main/python/java/chaquopy.pxd
+https://github.com/chaquo/chaquopy/blob/ebf3bec6624fa3c48928f2884b11722c34482de9/product/runtime/src/main/python/java/conversion.pxi
