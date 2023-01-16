@@ -54,6 +54,10 @@ def pass_object():
         print(pass_object_callback({
             "name": "Python name111"
         }))
+    if pass_object_callback1:
+        print(pass_object_callback1({
+            "name": "Python name111"
+        }))
     print("pass_object!!!!")
     return {
         "name": "Python name"

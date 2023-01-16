@@ -12,17 +12,6 @@ import com.chaquo.python.Python;
 import java.lang.annotation.Annotation;
 import java.util.function.Function;
 
-
-@RequiresApi(api = Build.VERSION_CODES.N)
-class A implements Function<String, String> {
-
-    @Override
-    public String apply(String s) {
-        System.out.println(s);
-        return "msg from Java!!!";
-    }
-}
-
 @RequiresApi(api = Build.VERSION_CODES.N)
 class B implements Function<PyObject, Person> {
 
@@ -62,19 +51,43 @@ public class MainActivity extends AppCompatActivity {
 //        System.out.println(pyObject1.toString());
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            pythonModule.put("pass_object_callback", (Function<Object[], Person>) o -> {
-                for (Object o1 : o) {
-                    System.out.println(o1);
-                }
+            Function<Object[], Person> callback = (Function<Object[], Person>) o -> {
+                System.out.println(this);
                 Person p = new Person();
                 p.setName("Java Name");
                 return p;
-            });
-            B b = new B();
-            pythonModule.put("pass_object_callback", b);
+            };
+            System.out.println(callback);
+            pythonModule.put("pass_object_callback1", callback);
+            Function<PyObject, Person> callback1 = new Function<PyObject, Person>() {
+                @Override
+                public Person apply(PyObject pyObject) {
+                    System.out.println(this);
+                    System.out.println(pyObject.asMap());
+                    Person p = new Person();
+                    p.setName("Java Name");
+                    return p;
+                }
+            };
+            System.out.println(callback1);
+            pythonModule.put("pass_object_callback", callback1);
+//            C b = new C();
+//            pythonModule.put("pass_object_callback", b);
         }
         PyObject pyObject2 = pythonModule.callAttr("pass_object");
         System.out.println(pyObject2.asMap());
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    class C implements Function<PyObject, Person> {
+
+        @Override
+        public Person apply(PyObject s) {
+            System.out.println(s.asMap());
+            Person p = new Person();
+            p.setName("Java Namenm");
+            return p;
+        }
     }
 }
 
